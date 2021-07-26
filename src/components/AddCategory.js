@@ -1,3 +1,5 @@
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 
 export const AddCategory = ({ setCategories }) => {
@@ -17,6 +19,7 @@ export const AddCategory = ({ setCategories }) => {
 
   return (
     <form onSubmit={handleSubmit}>
+      <FontAwesomeIcon icon={faSearch} style={{ marginRight: '20px' }} />
       <input type="text" value={inputValue} onChange={handleInputChange} />
     </form>
   );
