@@ -1,6 +1,7 @@
 import React from 'react';
 import { GiftGridItem } from './GiftGridItem';
 import { useFetchGifs } from '../hooks/useFetchGifs';
+import PropTypes from 'prop-types';
 export const GiftGrid = ({ category }) => {
   // api key giphy api.giphy.com/v1/gifs/search?api_key=okZw3zthSiahvRQcG9wzdvNhXkzLCJTL&q=Rick&limit=10
 
@@ -24,4 +25,7 @@ export const GiftGrid = ({ category }) => {
       </div>
     </>
   );
+};
+GiftGrid.protoType = {
+  category: PropTypes.object.isRequired
 };

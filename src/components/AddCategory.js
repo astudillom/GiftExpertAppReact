@@ -1,6 +1,7 @@
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 export const AddCategory = ({ setCategories }) => {
   const [inputValue, setInputValue] = useState(' ');
@@ -25,4 +26,8 @@ export const AddCategory = ({ setCategories }) => {
       </form>
     </>
   );
+};
+
+AddCategory.protoType = {
+  setCategories: PropTypes.func.isRequired
 };
