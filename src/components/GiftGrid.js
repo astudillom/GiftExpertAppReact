@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { GiftGridItem } from './GiftGridItem';
-import { getGift } from '../helpers/getGifs';
 import { useFetchGifs } from '../hooks/useFetchGifs';
 export const GiftGrid = ({ category }) => {
   // api key giphy api.giphy.com/v1/gifs/search?api_key=okZw3zthSiahvRQcG9wzdvNhXkzLCJTL&q=Rick&limit=10
@@ -9,8 +8,15 @@ export const GiftGrid = ({ category }) => {
 
   return (
     <>
-      <h3>{category}</h3>
-      {loading && <p>Loading</p>}
+      <h5 className="animate__animated animate__bounceInDown">{category}</h5>
+      {loading && (
+        <p
+          className="animate__animated animate__flash "
+          style={{ fontSize: '1.5rem' }}
+        >
+          Loading
+        </p>
+      )}
       <div className="card-grid">
         {data.map((data) => {
           return <GiftGridItem key={data.id} {...data} />;

@@ -18,9 +18,11 @@ export const AddCategory = ({ setCategories }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <FontAwesomeIcon icon={faSearch} style={{ marginRight: '20px' }} />
-      <input type="text" value={inputValue} onChange={handleInputChange} />
-    </form>
+    <>
+      <form onSubmit={handleSubmit}>
+        <FontAwesomeIcon icon={faSearch} style={{ marginRight: '12px' }} />
+        <input type="text" value={inputValue} onChange={handleInputChange} />
+      </form>
+    </>
   );
 };
